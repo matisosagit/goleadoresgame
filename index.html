@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="inicio" id="inicio">
+        <h1>Higher or Lower</h1>
+        <h2>Fútbol uruguayo</h2>
+        <h3>¡Adivina quién hizo más goles en un año en el Campeonato Uruguayo!</h3>
+        <input type="button" class="btn10" id="jugar" value="Jugar">
+        <br>
+        <br>
+        <a  href="rank.php"><input  type="button" class="btn10" id="jugar" value="Ver Ranking"></a>
+        
+        <br>
+    </div>
+    
+    <div class="maain" id="maain">
+        <div class="abc" id="abc">
+            
+            <div class="player1" id="player1">
+                <img id="img1" src="misterio.jpg">
+                <p id="txt1">Jugador 1</p>
+            </div>
+            
+            <div class="player2" id="player2">
+                <img id="img2" src="misterio.jpg" alt="">
+                <p id="txt2">Jugador 2</p>
+                <div class="buttons">
+                    <input type="button" class="btn10" id="mayor" value="Más goles">
+                    <input type="button" class="btn10" id="menor" value="Menos goles">
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <div class="fin" id="fin">
+        <p>Fin del juego</p>
+        <p id="puntuacion"></p>
+
+        <form action="guardar.php" method="post" enctype="multipart/form-data">
+            <p>Ingresa un nombre para guardar tu puntaje!</p>
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" name="nombre" required />
+            <input type="hidden" id="numero" name="numero" value="0" />
+            <input type="submit" value="Enviar" />
+        </form>
+        
+
+        <input type="button" class="btn10" id="volver" value="Volver al inicio">
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

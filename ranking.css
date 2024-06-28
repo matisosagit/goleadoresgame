@@ -1,0 +1,102 @@
+body{
+    background: linear-gradient(rgba(5,7,12,0.45),rgba(5,7,12,0.75)), url(img/fondo.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    color: azure;
+    text-shadow:
+    3px 3px 0 #000,
+    -3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000;
+}
+#rank {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: ce;
+    color: #fff;
+    text-shadow:
+    3px 3px 0 #000,
+    -3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000;
+    text-align: center;
+
+}
+
+#lista{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:center;
+    align-items: center;
+    background: linear-gradient(rgba(5,7,12,0.45),rgba(5,7,12,0.75));
+    width: 50%; 
+    list-style-type: none; 
+    gap: 0;
+    margin: 0;
+    border-radius: 40px;
+}
+
+.btn10 {
+    font-family: "proxima-nova", sans-serif;
+    background: linear-gradient(rgba(5,7,12,0.35),rgba(5,7,12,0.75));
+    opacity: 10000;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase !important;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden !important;
+    transition: all .3s ease-in-out;
+    z-index: 10;
+    gap: 1rem;
+}
+
+
+.btn10:hover {
+    border: 1px solid #071982;
+    color: #80ffd3 !important;
+}
+
+.btn10::before,
+.btn10::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    transform: skewX(-20deg);
+    left: -10%;
+    top: 0;
+    z-index: -12;
+    transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, .6);
+}
+
+.btn10::before {
+    background: #071982;
+}
+
+.btn10::after {
+    background: #80ffd3;
+    opacity: 0;
+    transition: all .4s cubic-bezier(.2, .95, .57, .99);
+}
+
+.btn10:hover::before {
+    width: 116%;
+}
+
+.btn10:hover::after {
+    width: 120%;
+    opacity: 1;
+}
