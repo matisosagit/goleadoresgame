@@ -24,7 +24,7 @@ var arrayimagenes = [
     ["Martín Rodríguez", 13, "img/martin.jpg"],
     ["Pablo Bengoechea", 10, "img/bengoechea.jpg"],
     ["Juan González", 16, "img/juan.jpg"],
-    ["Darío Silva", 19, "img/ario.jpeg"],
+    ["Darío Silva", 19, "img/dario.jpeg"],
     ["Wilmar Cabrera", 12, "img/wilmar.jpg"],
     ["Julio Dely", 16, "img/dely.jpg"],
     ["Adolfo Barán", 13, "img/barán.jpg"],
@@ -58,11 +58,15 @@ function jugar() {
     tt1 = document.getElementById("txt1");
     g1 = arraycopia[i][1];
 
+    arraycopia.splice(i, 1);
+
     imgSrc2 = arraycopia[j][2];
     imgElement2 = document.getElementById("img2");
     texto2 = arraycopia[j][0];
     tt2 = document.getElementById("txt2");
     g2 = arraycopia[j][1];
+
+    arraycopia.splice(j, 1);
 
     document.getElementById("inicio").style.display = "none";
     document.getElementById("maain").style.display = "flex";
@@ -74,7 +78,6 @@ function jugar() {
     imgElement2.src = imgSrc2;
     tt2.innerText = texto2 + " hizo: ";
 
-    arraycopia.splice(i, 1);
 }
 
 function volver() {
@@ -97,8 +100,8 @@ function terminarjuego() {
     document.getElementById("numero").value = puntaje;
 
     $.ajax({
-        url: 'guardar.php',
         type: 'POST',
+        url: 'guardar.php',
         data: { numero: puntaje },
         success: function(response) {
             console.log('Puntaje enviado correctamente.');
@@ -177,6 +180,3 @@ function menor() {
         terminarjuego();
     }
 }
-
-
-
